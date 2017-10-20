@@ -36,7 +36,7 @@ public class MessageBodyBlock extends InboxPage {
      * @return
      */
     public InboxPage sendingMsg(String recipient, String theme) {
-        $x(".//div[@id='b-compose']").shouldBe(enabled);
+        $x("//div[@id='b-compose']").shouldBe(enabled);
         actions().moveToElement(msgRecipient).sendKeys(recipient).sendKeys(Keys.ENTER).build().perform();
         actions().moveToElement(msgTheme).click().sendKeys(theme).build().perform();
         executeJavaScript("tinyMCE.activeEditor.setContent('<h1>HELLO!</h1> This is test text')");
