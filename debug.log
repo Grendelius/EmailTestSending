@@ -1,0 +1,28 @@
+[1012/145345.509:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/150023.821:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/150147.499:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/153411.409:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/153758.202:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/154206.227:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/155138.310:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/155314.769:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/162206.207:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/163003.395:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/172553.298:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/173154.899:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/173238.585:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/173439.655:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/173922.326:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/174014.136:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/174053.435:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1012/174155.455:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1013/134708.899:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1013/135408.150:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1013/140024.257:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1013/140135.714:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[1016/134901.629:ERROR:process_info.cc(632)] range at 0x2d4a322000000000, size 0x16d fully unreadable
+[1016/134901.726:ERROR:process_info.cc(632)] range at 0x2d4a324000000000, size 0x16d fully unreadable
+[1016/134901.726:ERROR:process_info.cc(632)] range at 0x0, size 0x16d fully unreadable
+[1016/134903.076:ERROR:file_io_win.cc(164)] CreateFile C:\valueObjects\ATOLKA~1\AppData\Local\Temp\scoped_dir3652_12655\Crashpad\settings.dat: ������� �� ������� ����� ��������� ����. (0x3)
+[1016/134903.077:ERROR:file_io_win.cc(173)] CreateFile C:\valueObjects\ATOLKA~1\AppData\Local\Temp\scoped_dir3652_12655\Crashpad\reports\c7822ba1-d96b-4f81-b7fb-0bee056eee0d.dmp: ������� �� ������� ����� ��������� ����. (0x3)
+[1016/134903.077:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
