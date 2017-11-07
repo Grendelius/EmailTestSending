@@ -6,13 +6,16 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import pages.InboxPage;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MessageBodyBlock extends InboxPage {
     private final String CTRL_ENTER = Keys.chord(Keys.CONTROL, Keys.ENTER);
 
-    //Message recioient field
+    //Message recipient field
     @FindBy(xpath = "//div[@class='compose-head__field']")
     @CacheLookup
     private SelenideElement msgRecipient;
@@ -35,8 +38,8 @@ public class MessageBodyBlock extends InboxPage {
      * @param theme
      * @return
      */
-    public InboxPage sendingMsg(String recipient, String theme) {
-        String text = "<h1>Hello, everyone!</h1> This is text";
+    public InboxPage sendingMsg(String recipient, String theme) throws IOException {
+        String text = getTextFromFile("path_to_file");
         $x("//div[@id='b-compose']").shouldBe(enabled);
         actions().moveToElement(msgRecipient).sendKeys(recipient).sendKeys(Keys.ENTER).build().perform();
         actions().moveToElement(msgTheme).click().sendKeys(theme).build().perform();
@@ -45,5 +48,16 @@ public class MessageBodyBlock extends InboxPage {
         return page(InboxPage.class);
     }
 
-
+    private String getTextFromFile(String pathToTextFile) throws IOException {
+        try {
+            FileInputStream inFile = new FileInputStream(pathToTextFile);
+            byte[] str = new byte[inFile.available()];
+            inFile.read(str);
+            String text = new String(str);
+            return text;
+        } catch (IOException exc) {
+            System.out.println("Text file not found! Returning NULL!");
+            return null;
+        }
+    }
 }
