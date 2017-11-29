@@ -38,7 +38,7 @@ public class MessageBodyBlock extends InboxPage {
      * @param theme
      * @return
      */
-    public InboxPage sendingMsg(String recipient, String theme) throws IOException {
+    public InboxPage sendingMsgFromTxtFile(String recipient, String theme) throws IOException {
         String text = getTextFromFile("path_to_file");
         $x("//div[@id='b-compose']").shouldBe(enabled);
         actions().moveToElement(msgRecipient).sendKeys(recipient).sendKeys(Keys.ENTER).build().perform();
