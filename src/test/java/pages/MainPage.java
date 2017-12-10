@@ -1,41 +1,25 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import pageElements.AuthorizationBlock;
 import valueObjects.User;
 
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class MainPage {
 
-    //Login field
-    @FindBy(id = "mailbox:login")
-    @CacheLookup
-    private SelenideElement logField;
-
-    //Password field
-    @FindBy(id = "mailbox:password")
-    @CacheLookup
-    private SelenideElement pswField;
-
-    //Submit button
-    @FindBy(className = "o-control")
-    @CacheLookup
-    private SelenideElement authBtn;
-
+    @FindBy(xpath = "//div[@class='mailbox__body']")
+    private AuthorizationBlock authorizationBlock;
 
     /**
-     * E-mail logging
-     *
+     * User authorization
      * @param user
      * @return
      */
     public InboxPage authorization(User user) {
-        $(logField).setValue(user.getName());
-        $(pswField).setValue(user.getPassword());
-        $(authBtn).submit();
+        authorizationBlock.inputLogin(user.getName());
+        authorizationBlock.inputPsw(user.getPassword());
+        authorizationBlock.clickOnAuthBtn();
         return page(InboxPage.class);
     }
 

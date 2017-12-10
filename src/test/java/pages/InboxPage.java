@@ -1,14 +1,19 @@
 package pages;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import pageElements.MessageBodyBlock;
 
-import static com.codeborne.selenide.Selenide.$;
+import java.io.IOException;
+
+import static com.codeborne.selenide.Selenide.*;
 
 public class InboxPage {
+    private static final String CTRL_ENTER = Keys.chord(Keys.CONTROL, Keys.ENTER);
+
+    @FindBy(xpath = "//div[@id='b-compose']")
     private MessageBodyBlock msgBlock;
 
     //"Write a letter" button
@@ -26,9 +31,21 @@ public class InboxPage {
      *
      * @return MessageBodyBlock element
      */
-    public MessageBodyBlock sendBtnClick() {
+    public InboxPage sendBtnClick() {
         $(sendBtn).click();
-        return Selenide.page(MessageBodyBlock.class);
+        return page(this);
+    }
+
+    /**
+     * Sends a message and submit it
+     *
+     * @param recipient
+     * @param theme
+     * @throws IOException
+     */
+    public void sendMsg(String recipient, String theme) throws IOException {
+        msgBlock.fillTheMsgFromFile(recipient, theme);
+        actions().sendKeys(CTRL_ENTER).build().perform();
     }
 
     public void logOut() {
