@@ -10,6 +10,9 @@ import java.io.IOException;
 
 import static com.codeborne.selenide.Selenide.*;
 
+/**
+ * Using for structure description of page into user's mailbox
+ */
 public class InboxPage {
     private static final String CTRL_ENTER = Keys.chord(Keys.CONTROL, Keys.ENTER);
 
@@ -56,7 +59,7 @@ public class InboxPage {
      * Checks an element on the page
      * @return
      */
-    public SelenideElement result() {
+    public SelenideElement sendingResult() {
         return $("div.message-sent__title");
     }
 }

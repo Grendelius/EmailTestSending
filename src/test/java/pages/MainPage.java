@@ -6,7 +6,11 @@ import valueObjects.User;
 
 import static com.codeborne.selenide.Selenide.page;
 
+/**
+ * Using for structure description of main page on Mail.Ru
+ */
 public class MainPage {
+    public static final String PAGE_URL = "https://mail.ru/";
 
     @FindBy(xpath = "//div[@class='mailbox__body']")
     private AuthorizationBlock authorizationBlock;
