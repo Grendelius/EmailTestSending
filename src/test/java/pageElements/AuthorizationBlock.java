@@ -32,7 +32,7 @@ public class AuthorizationBlock extends ElementsContainer {
      * @param login
      */
     public void inputLogin(String login) {
-        $(logField).val(login);
+        logField.val(login);
     }
 
     /**
@@ -41,13 +41,13 @@ public class AuthorizationBlock extends ElementsContainer {
      * @param psw
      */
     public void inputPsw(String psw) {
-        $(pswField).val(psw);
+        pswField.val(psw);
     }
 
     /**
      * Clicks on "entry" btn
      */
     public void clickOnAuthBtn() {
-        actions().moveToElement($(authBtn)).click().build().perform();
+        actions().moveToElement(authBtn).click().build().perform();
     }
 }
