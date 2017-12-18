@@ -35,7 +35,7 @@ public class InboxPage {
      * @return MessageBodyBlock element
      */
     public InboxPage sendBtnClick() {
-        $(sendBtn).click();
+        sendBtn.click();
         return page(this);
     }
 
@@ -52,7 +52,7 @@ public class InboxPage {
     }
 
     public void logOut() {
-        $(logOutLink).click();
+        logOutLink.click();
     }
 
     /**
